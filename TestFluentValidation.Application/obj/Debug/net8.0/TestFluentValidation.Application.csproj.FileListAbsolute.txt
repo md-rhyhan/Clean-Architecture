@@ -1,0 +1,17 @@
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\bin\Debug\net8.0\TestFluentValidation.Application.deps.json
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\bin\Debug\net8.0\TestFluentValidation.Application.dll
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\bin\Debug\net8.0\TestFluentValidation.Application.pdb
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\bin\Debug\net8.0\TestFluentValidation.Domain.dll
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\bin\Debug\net8.0\TestFluentValidation.Infrastructure.dll
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\bin\Debug\net8.0\TestFluentValidation.Domain.pdb
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\bin\Debug\net8.0\TestFluentValidation.Infrastructure.pdb
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\TestFluentValidation.Application.csproj.AssemblyReference.cache
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\TestFluentValidation.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\TestFluentValidation.Application.AssemblyInfoInputs.cache
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\TestFluentValidation.Application.AssemblyInfo.cs
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\TestFluentValidation.Application.csproj.CoreCompileInputs.cache
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\TestFluentValidation.Application.csproj.CopyComplete
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\TestFluentValidation.Application.dll
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\refint\TestFluentValidation.Application.dll
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\TestFluentValidation.Application.pdb
+D:\DotNetCode\Fluent Validation\TastFluentValidation\TestFluentValidation\TestFluentValidation.Application\obj\Debug\net8.0\ref\TestFluentValidation.Application.dll

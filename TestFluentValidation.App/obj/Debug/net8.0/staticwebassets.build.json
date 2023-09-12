@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "eh8hANIhUSXPcp89B9ScsOcYaOVpk1MccJXzNaAbar4=",
+  "Source": "TestFluentValidation.App",
+  "BasePath": "_content/TestFluentValidation.App",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

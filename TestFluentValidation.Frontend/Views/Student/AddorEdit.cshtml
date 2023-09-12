@@ -1,0 +1,158 @@
+﻿@model TestFluentValidation.Frontend.Models.ViewModel.Student
+
+@{
+    ViewData["Title"] = "AddorEdit";
+}
+
+<h1>AddorEdit</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddorEdit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudentName" class="control-label"></label>
+                <input asp-for="StudentName" class="form-control" />
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentEmail" class="control-label"></label>
+                <input asp-for="StudentEmail" class="form-control" />
+                <span asp-validation-for="StudentEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentPhone" class="control-label"></label>
+                <input asp-for="StudentPhone" class="form-control" />
+                <span asp-validation-for="StudentPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfBirth" class="control-label"></label>
+                <input asp-for="DateOfBirth" class="form-control" />
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Ssc" /> @Html.DisplayNameFor(model => model.Ssc)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Hsc" /> @Html.DisplayNameFor(model => model.Hsc)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bsc" /> @Html.DisplayNameFor(model => model.Bsc)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Msc" /> @Html.DisplayNameFor(model => model.Msc)
+                </label>
+            </div>
+            <div class="form-group">
+                <label name="pictureFile" class="control-label"></label>
+                <input name="pictureFile" type="file" class="form-control" />
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label">Country Name</label>
+                <select asp-for="CountryId" asp-items="@(ViewBag.CountryId)" class="form-select ">
+                    <option selected>--Select Sate Name--</option>
+                </select>
+                <span asp-validation-for="CountryId" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label">Sate Name</label>
+                <select asp-for="StateId" asp-items="@(ViewBag.StateId)" class="form-select ">
+                    <option selected>--Select Sate Name--</option>
+                </select>
+                <span asp-validation-for="StateId" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label">City Name</label>
+                <select asp-for="CityId" asp-items="@(ViewBag.CityId)" class="form-select ">
+                    <option selected>--Select City Name--</option>
+                </select>
+                <span asp-validation-for="CityId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+
+            $('#countryId').change(function () {
+                $.ajax({
+                    type: "get",
+                    url: "/Employee/StateDropdownData",
+                    data: { countryId: $('#countryId').val() },
+                    datatype: "json",
+                    traditional: true,
+                    success: function (data) {
+                        var state = "<select id='stateId'>";
+                        state = state + '<option value="">Select State</option>';
+                        for (var i = 0; i < data.length; i++) {
+                            state = state + '<option value=' + data[i].id + '>' + data[i].name + '</option>';
+                        }
+                        state = state + '</select>';
+                        $('#stateId').html(state);
+                    }
+                });
+            });
+
+            // Get Cities by State ID
+            $('#stateId').change(function () {
+                $.ajax({
+                    type: "get",
+                    url: "/Employee/CityDropdownData",
+                    data: { stateId: $('#stateId').val() },
+                    datatype: "json",
+                    traditional: true,
+                    success: function (data) {
+                        var city = "<select id='cityId'>";
+                        city = city + '<option value="">Select City</option>';
+                        for (var i = 0; i < data.length; i++) {
+                            city = city + '<option value=' + data[i].id + '>' + data[i].name + '</option>';
+                        }
+                        city = city + '</select>';
+                        $('#cityId').html(city);
+                    }
+                });
+            });
+        });
+
+        function PreviewImage() {
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("FileUpload").files[0]);
+
+            oFReader.onload = function (oFREvent) {
+                document.getElementById("UploadFile").src = oFREvent.target.result;
+            };
+        };
+    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
